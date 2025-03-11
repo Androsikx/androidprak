@@ -1,9 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:startDestination="@id/mainFragment">
+    app:startDestination="@id/loginFragment">
 
-    <!-- Головний екран -->
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.practiceandroidstudio.LoginFragment"
+        android:label="Авторизація">
+        <action
+            android:id="@+id/action_loginFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.example.practiceandroidstudio.RegistrationFragment"
+        android:label="Реєстрація">
+        <action
+            android:id="@+id/action_registrationFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_registrationFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.example.practiceandroidstudio.MainFragment"
@@ -16,15 +39,33 @@
             app:destination="@id/fragment3" />
     </fragment>
 
-    <!-- Фрагмент, що відповідає за "Activity2" -->
     <fragment
         android:id="@+id/fragment2"
         android:name="com.example.practiceandroidstudio.Fragment2"
         android:label="Fragment2" />
 
-    <!-- Фрагмент, що відповідає за "Activity3" -->
     <fragment
         android:id="@+id/fragment3"
         android:name="com.example.practiceandroidstudio.Fragment3"
         android:label="Fragment3" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.practiceandroidstudio.ProfileFragment"
+        android:label="Profile" />
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.practiceandroidstudio.HomeFragment"
+        android:label="Home" />
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.example.practiceandroidstudio.ListFragment"
+        android:label="List" />
+
+    <fragment
+        android:id="@+id/mysteryFragment"
+        android:name="com.example.practiceandroidstudio.MysteryFragment"
+        android:label="Mystery" />
 </navigation>
